@@ -1,0 +1,81 @@
+package br.com.algotrade.testes;
+
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.data.xy.DefaultHighLowDataset;
+import org.jfree.ui.ApplicationFrame;
+import org.jfree.ui.RefineryUtilities;
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import br.com.algotrade.dao.AtivoDAOImpl;
+import br.com.algotrade.dao.interfaces.AtivoDAO;
+import br.com.algotrade.entidades.Ativo;
+import br.com.algotrade.negocio.AtivoBuilderForex;
+import br.com.algotrade.util.HttpClientUtil;
+
+public class CandleStickChart extends ApplicationFrame {
+	
+	private static final String SITE_FOREX = 
+			"http://www.forexpros.com.pt/indices/bovespa-components";
+	
+	public CandleStickChart(){
+		this("Default");
+	}
+	
+	public CandleStickChart(String titel) {
+		super(titel);
+
+		final DefaultHighLowDataset dataset = createDataset();
+		final JFreeChart chart = createChart(dataset);
+		final ChartPanel chartPanel = new ChartPanel(chart);
+		chartPanel.setPreferredSize(new java.awt.Dimension(600, 350));
+		setContentPane(chartPanel);
+		
+	}
+
+	private DefaultHighLowDataset createDataset() {
+		List<Ativo> ativos = null;
+		try {
+
+			String responseBody = HttpClientUtil.requestNoSite(SITE_FOREX);
+			AbstractApplicationContext context = new ClassPathXmlApplicationContext(
+					"applicationContext-teste.xml");
+			
+			AtivoBuilderForex ativoBuilderForex = context.getBean(AtivoBuilderForex.class);
+			AtivoDAO ativoDAO = context.getBean(AtivoDAOImpl.class);
+			ativos = ativoBuilderForex.constroiAtivos(responseBody);
+		
+		} catch (Exception e) { e.printStackTrace();}
+		
+		double[] d = {1,2};
+		
+		DefaultHighLowDataset data = new DefaultHighLowDataset(new String("a"), new Date[]{new Date()}, new double[]{1,2},
+				new double[]{1,2}, new double[]{1,2}, new double[]{1,2}, new double[]{1,2});
+		return data;
+	}
+
+	private Date createData(int year, int month, int date) {
+		Calendar calendar = Calendar.getInstance();
+		calendar.set(year, month - 1, date);
+		return calendar.getTime();
+	}
+
+	private JFreeChart createChart(final DefaultHighLowDataset dataset) {
+		final JFreeChart chart = ChartFactory.createCandlestickChart(
+				"Candlestick Demo", "Time", "Price", dataset, false);
+		return chart;
+	}
+	
+	public static void main(String args[]) throws Exception {
+		CandleStickChart chart = new CandleStickChart("Candle Stick Chart");
+		chart.pack();
+		RefineryUtilities.centerFrameOnScreen(chart);
+		chart.setVisible(true);
+	}
+}

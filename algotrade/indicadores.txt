@@ -1,0 +1,190 @@
+GRAFICO: Usa escala de preços aritmética - http://www.markets.com/pt/education/technical-analysis/charts.html
+
+1 - Indicadores
+-----------------
+1.1 - Rastreadores:
+Tend�ncia de um ativo, obejtivo de sinalizar coer�ncia ou divergencia
+do pre�o.
+-----------------
+*Media Moveis, OBV - On Balance Volume, MACD (moving avegrage convergence
+and devergence)
+-----------------
+IFR:
+Linha de sobrecompra fica posicionada na altura dos 70%
+Linha de sobrevenda fica posicionada na altura dos 30%
+----------------------------------
+
+1.2 - Osciladores:
+Oscila��o do pre�o de um ativo, pra sinalizar um poss�vel ponto de revers�o,
+do movimento de alta ou baixa.
+-----------------
+Sobrecompra e Sobrevenda*.
+-----------------
+*IFR (Indice de Forca Relativa), Estroc�tico, Willians, etc
+-----------------------------------
+
+1.3 - Mistos:
+Comportamento de um GRUPO de a�oes. Vizualizar consenso do mercado
+como um todo, ou apenas de um setor especifico.
+-----------------
+Rastreadores de tend�ncia ou Ociladores.
+-----------------
+*LAD (linha de avan�o e decl�nio), *Climax e New High New Low.
+-----------------
+Climax (indicador de �rea)
+Sobrecompra e Sobrevenda
+Sobrevenda - linha dos 50% pra baixo. Repique(termo). Hora de comprar.
+------------------
+
+------------------------------------
+
+
+DIVERGENCIAS DE ALTA:
+sao formadas ao comprar comportamento do indicador em rela�ao movimento 
+do preco de um ativo.
+Ocorre qdo o indicador n�o acompanha o comportamente baixista do pre�o.
+(LAD)
+
+De BAIXA � o oposto.
+
+
+--------------------------
+
+MEDIAS MOVEIS
+
+Mede o valor medio do preco, volume ou outro indicador de um determinado
+per�odo. Calculo: 
+1 tipo da media a ser usada: *simples*, exponencial*,
+ponderada ou outra.
+2 - Preco, abertura, maxima, minima ou fechamento*.
+3 - Periodo -> qdte de dados ou elementos que serao usadas no calculo da media.
+-----
+1 - Suavisa os movimentos do preco.
+2 - Ajuda indentificar tendencia vigente do preco. cima - alta, baixo - baixa de preco.
+3 - suporte e resistencia para preco. 
+----------
+qto maior periodo de calculo da media, maior sera o prazo da tendencia monitorada.
+---------
+dois tipos de medias moveis mais utilizadas:
+1 - MM Simples ou aritmetica
+soma de um conjunto de valores, dividido pela qtde de elementos somados.
+(VER FORMULA*) - 
+(V1 + V2 + ... + Vn)/n
+n = numero de periodos
+v = valor
+*Mais usado: Media Movel Simples de 5 periodos, sob o preco do fechamento.
+obs. o calculo � refeito a cada novo dado (valor fechado).
+
+2 - MM Exponencial
+Da um peso maior ao rpeco mais recente.
+Acompanha mais rapidamente a mudanda do preco de uma acao.
+
+(V1 - MML Anterior)*(2/(n+1))+MML ANterior
+------
+apos a definicao do tipo e periodo da media optada, manter sempre a mesma.
+--------------------------------
+
+LAD
+
+linha de avancos e declinios
+inidicador misto, rastreador de tendencia.
+monitora a saude do mercado, indice ou setor da econom
+(mede forca de acao compradora e vendedora)
+curto � medio prazo.
+acoes que subiram -(menos) acoes que cairam
+LAD=LAD anterior + QTaltas - QTbaixas.
+
+Sinais Graficos
+1 - Coerencia da tendencia
+2 - Divergencia de alta ou baixa.
+3 - Rompimento antecipado de resistencia ou suportes.
+
+Analistas usam para apoiar a compra ou venda de um setor
+ou indice analisado.
+
+------------------------------------
+
+CLIMAX
+Indicador Misto - Ocilador
+monitora se um mercado esta sobrec ou sobrev
+calculo: grupo de acoes e avalia cada um se fechou em alta
+ou baixa. E se OBV esta acumulando ou distribuindo
+
+1 - acao em alta e OBV acumulando = +1 para o ativo
+2 - acao em alta e obv neutro= 0
+3 - acao em baixa e obv distribuindo = -1
+4 - acao em baixa e obv neutro = 0
+
+sobrecompra e sobrevenda de 50% e -50%
+mas numa tendencia de alta eh considerado sobrevendido abaixo dos -30%
+e baixa � considerado sobrec acima dos 30%
+
+sinais graficos:
+1 - invasao das regioes de sobrec e sobrev. qdo entra existe a chance de
+reversao de alta ou de baixa.
+2 - divergencia de alta ou baixa. sinal mais significativo do climax.
+principamente qdo ocorre na regiao de sobrec e sobrev. analistas costuma usar
+exatamente este ultimo cenario pra comprar ou vender.
+
+-----------------------------------------
+
+IFR* - Indice de forca relativa
+
+Indicador Oscilador
+Monitora velo e mudanca dos movimentos dos precos.
+Sinaliza momentos em que um ativo esta sobrec ou sobrev
+
+FR = MG / MP
+mg = media de ganhos
+mp = media de perdas
+
+-------------------------------------------
+
+IFR = 100-(100/(1+FR))
+IFR = indice de forca relativa
+FR = foraca relativa
+
+qtde de periodos. 14 periodos recomendado pelo criador.
+
+Principais Caracteristica:
+
+1 - escala de oscilacao fixa de 0-100
+2 - Possui regioes de sobrecv
+sobrec, acima de 70 pontos
+sobrev, acima abaixo dos 30 pontos
+
+quando a linha do ifr esta longe da regiao de sobrec, ent�o abaixa
+a linha dos 70, para 60 pontos.
+
+-----------------------------------------------
+
+VOLUME
+
+Rastro dos grandes investidores em um ativo
+forma de rastrear pra que lado esta indo o dinheiro
+
+3 tipos
+1 - acoes - qtd total de acoes negociada
+2 - financeiro - valor total em reais negociado
+3 - negocios - qtde de negocios realizados
+(totods, durante um periodo)
+
+Importancia
+1 confirmacao da tendencia do preco
+tend alta - volume maior nos dias de alta e menor nos de baixa
+tend baixa - vol maior nos dias de baixa e menor nos dias de alta.
+
+estrategia usada pelos analistas: comprar no rompimento de resistencia
+e com o volume acima da media.
+
+------------------------------------------------
+
+OBV
+
+-------------------------
+IDEIAS:
+1 - Identificar GAPS
+
+------------------
+
+

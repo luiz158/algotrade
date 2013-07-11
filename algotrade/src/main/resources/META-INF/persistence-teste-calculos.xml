@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0">
+
+	<persistence-unit name="algotrade-teste-calculos">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<class>br.com.algotrade.entidades.Ativo</class>
+		<class>br.com.algotrade.entidades.Grafico</class>
+		<class>br.com.algotrade.entidades.HistoricoGeral</class>
+		<class>br.com.algotrade.entidades.HistoricoDoDia</class>
+
+		<properties>
+			<property name="hibernate.archive.autodetecion" value="class, hbm" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLInnoDBDialect" />
+			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+			<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/algo_trade_teste_calculos" />
+			<property name="hibernate.connection.username" value="root" />
+			<property name="hibernate.connection.password" value="root" />
+			<property name="hibernate.hbm2ddl.auto" value="create" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+			<property name="use_sql_comments" value="true" />
+		</properties>
+	</persistence-unit>
+</persistence>

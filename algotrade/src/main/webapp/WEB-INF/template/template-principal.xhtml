@@ -1,0 +1,21 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title><!-- ui:insert name="NomeDoTitle">#{msg["principal.title"]}</ui:insert--></title>
+</h:head>
+<h:body styleClass="body">
+	<!-- h:outputStylesheet library="css" name="style.css" target="head" /-->
+	<ui:insert name="cabecalho">
+		<ui:include src="fragmentos-template/cabecalho.xhtml" />
+	</ui:insert>
+	<!-- ui:insert name="corpo">
+		<ui:include src="fragmentos-template/corpo.xhtml" />
+	</ui:insert>
+	<ui:insert name="rodape">
+		<ui:include src="fragmentos-template/rodape.xhtml" />
+	</ui:insert-->
+</h:body>
+</html>
