@@ -89,7 +89,7 @@ public class Testes {
 				valorFim = valorCorrente;
 			}
 			
-			System.out.println("ValorInicio: " + valorInicio);
+			System.out.println("valorInicio: " + valorInicio);
 			System.out.println("valorMaisAlto: " + valorMaisAlto);
 			System.out.println("valorMaisBaixo: " + valorMaisBaixo);
 			System.out.println("valorFim: " + valorFim);
